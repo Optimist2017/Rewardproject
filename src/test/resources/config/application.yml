@@ -1,0 +1,102 @@
+# ===================================================================
+# Spring Boot configuration.
+#
+# This configuration is used for unit/integration tests.
+#
+# More information on profiles: https://www.jhipster.tech/profiles/
+# More information on configuration properties: https://www.jhipster.tech/common-application-properties/
+# ===================================================================
+
+# ===================================================================
+# Standard Spring Boot properties.
+# Full reference is available at:
+# http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+# ===================================================================
+
+eureka:
+  client:
+    enabled: false
+  instance:
+    appname: Rewardproject
+    instanceId: Rewardproject:${spring.application.instance-id:${random.value}}
+
+spring:
+  profiles:
+    # Uncomment the following line to enable tests against production database type rather than H2, using Testcontainers
+    #active: testcontainers
+  application:
+    name: Rewardproject
+  cloud:
+    config:
+      enabled: false
+
+  jackson:
+    serialization:
+      write-durations-as-timestamps: false
+  liquibase:
+    contexts: test
+    url: jdbc:h2:mem:rewardproject;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+  mail:
+    host: localhost
+  main:
+    allow-bean-definition-overriding: true
+  messages:
+    basename: i18n/messages
+  r2dbc:
+    url: r2dbc:h2:mem:///rewardproject;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: r2dbc
+    password:
+  task:
+    execution:
+      thread-name-prefix: rewardproject-task-
+      pool:
+        core-size: 1
+        max-size: 50
+        queue-capacity: 10000
+    scheduling:
+      thread-name-prefix: rewardproject-scheduling-
+      pool:
+        size: 20
+  thymeleaf:
+    mode: HTML
+
+server:
+  port: 10344
+  address: localhost
+
+# ===================================================================
+# JHipster specific properties
+#
+# Full reference is available at: https://www.jhipster.tech/common-application-properties/
+# ===================================================================
+jhipster:
+  clientApp:
+    name: 'rewardprojectApp'
+  logging:
+    # To test json console appender
+    use-json-format: false
+    logstash:
+      enabled: false
+      host: localhost
+      port: 5000
+      queue-size: 512
+  mail:
+    from: test@localhost
+    base-url: http://127.0.0.1:8080
+  security:
+    authentication:
+      jwt:
+        # This token must be encoded using Base64 (you can type `echo 'secret-key'|base64` on your command line)
+        base64-secret: MDQyN2MwM2MzODVlMWQwYWRiNGI3OTM2ZGVjODEzNTRjNDJkYTYwODcyZjU1NTVkZjRmNGU2MDZmOWJkZDcxZTBmNDNjMTkwNDM1MDVjMDUxYzAyNTRlNWQ5MGIzMjk3ZjhhMGRkYjkyODQ0ODJjM2FiMTk0NTU4MzVhZGM2NTU=
+        # Token is valid 24 hours
+        token-validity-in-seconds: 86400
+# ===================================================================
+# Application specific properties
+# Add your own application properties here, see the ApplicationProperties class
+# to have type-safe configuration, like in the JHipsterProperties above
+#
+# More documentation is available at:
+# https://www.jhipster.tech/common-application-properties/
+# ===================================================================
+
+# application:
