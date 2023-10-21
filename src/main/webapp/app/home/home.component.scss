@@ -6,8 +6,12 @@ Main page styles
   display: inline-block;
   width: 347 * 2px;
   height: 497px;
-  background: url('../../content/images/satorify-head-img.png') no-repeat center top;
+  background: url('../../content/images/head-image.jpg') no-repeat center top;
   background-size: contain;
+}
+
+p {
+  font-size: 24px;
 }
 
 /* wait autoprefixer update to allow simple generation of high pixel density media query */

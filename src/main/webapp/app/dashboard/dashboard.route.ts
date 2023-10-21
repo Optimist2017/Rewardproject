@@ -3,9 +3,9 @@ import { Route } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
 
 export const DASHBOARD_ROUTE: Route = {
-  path: 'dashboard',
+  path: '',
   component: DashboardComponent,
   data: {
-    pageTitle: 'dashboard',
+    pageTitle: 'dashboard.title',
   },
 };

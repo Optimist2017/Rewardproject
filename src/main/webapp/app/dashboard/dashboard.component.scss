@@ -1,0 +1,27 @@
+.gradient1 {
+  background: linear-gradient(to right, #bb0073, #ffd166);
+}
+
+.gradient2 {
+  background: linear-gradient(to right, #8fd3f4, #d2b9d3);
+}
+
+.gradient3 {
+  background: linear-gradient(to right, #ffa07a, #d57a66);
+}
+
+.menu-item {
+  padding: 60px;
+
+  text-align: center;
+  border: 1px solid #ddd;
+  text-align: center;
+  color: white;
+  border-radius: 20px;
+}
+.menu-link {
+  text-decoration: none;
+}
+.menu-link:hover .menu-item {
+  background: linear-gradient(to right, #ff6b6b, #ffd166); /* Change to the desired hover gradient */
+}
