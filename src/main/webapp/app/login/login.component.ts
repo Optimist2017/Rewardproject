@@ -29,10 +29,10 @@ export class LoginComponent implements OnInit, AfterViewInit {
   ) {}
 
   ngOnInit(): void {
-    // if already authenticated then navigate to home page
+    // if already authenticated then navigate to dashboard page
     this.accountService.identity().subscribe(() => {
       if (this.accountService.isAuthenticated()) {
-        this.router.navigate(['']);
+        this.router.navigate(['dashboard']);
       }
     });
   }
