@@ -25,3 +25,10 @@
 .menu-link:hover .menu-item {
   background: linear-gradient(to right, #ff6b6b, #ffd166); /* Change to the desired hover gradient */
 }
+.itemslist{
+  background: linear-gradient(to right, #ff6b6b, #ffd166);
+}
+.itemslist:hover {
+  background: rgba(0, 0, 0, 0.062); /* Color change on hover */
+  color: rgb(1, 1, 27);
+}

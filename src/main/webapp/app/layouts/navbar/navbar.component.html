@@ -15,14 +15,17 @@
       aria-label="Toggle navigation"
       (click)="toggleNavbar()"
     >
-      <fa-icon icon="bars"></fa-icon>
+      <fa-icon icon="bars" style="color:orange"></fa-icon>
     </a>
     <div class="navbar-collapse collapse" id="navbarResponsive" [ngbCollapse]="isNavbarCollapsed" [ngSwitch]="account !== null">
       <ul class="navbar-nav ms-auto">
+       
+
         <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
           <a class="nav-link" routerLink="/" (click)="collapseNavbar()">
             <span>
-              <span>About</span>
+              <fa-icon icon="home" style="color: orange"></fa-icon>
+              <span jhiTranslate="global.menu.home">Home</span>
             </span>
           </a>
         </li>
@@ -30,8 +33,8 @@
         <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
           <a class="nav-link" routerLink="/" (click)="collapseNavbar()">
             <span>
-              <fa-icon icon="home" style="color: red"></fa-icon>
-              <span jhiTranslate="global.menu.home">Home</span>
+              <fa-icon icon="info-circle" style="color: orange"> </fa-icon>
+              <span>About</span>
             </span>
           </a>
         </li>
@@ -125,7 +128,7 @@
         >
           <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="account-menu" data-cy="accountMenu">
             <span *ngIf="!account?.imageUrl">
-              <fa-icon icon="user" style="color: red"></fa-icon>
+              <fa-icon icon="user" style="color: orange"></fa-icon>
               <span jhiTranslate="global.menu.account.main">Account</span>
             </span>
             <span *ngIf="account?.imageUrl">
