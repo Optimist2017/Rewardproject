@@ -1,0 +1,20 @@
+
+
+// Define the Points Scored entity
+entity PointsScored {
+  Id Long,
+  PointsEarned Integer,
+}
+
+// Set up relationships
+relationship OneToMany {
+  PointsScored{user} to User{firstname}
+}
+
+relationship ManyToMany {
+  PointsScored{task(name) required} to Task{name}
+}
+
+
+
+

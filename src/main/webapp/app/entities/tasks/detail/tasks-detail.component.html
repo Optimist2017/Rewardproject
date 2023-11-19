@@ -1,0 +1,44 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="tasks">
+      <h2 data-cy="tasksDetailsHeading"><span jhiTranslate="rewardprojectApp.tasks.detail.title">Tasks</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ tasks.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="rewardprojectApp.tasks.name">Name</span></dt>
+        <dd>
+          <span>{{ tasks.name }}</span>
+        </dd>
+        <dt><span jhiTranslate="rewardprojectApp.tasks.url">Url</span></dt>
+        <dd>
+          <span>{{ tasks.url }}</span>
+        </dd>
+        <dt><span jhiTranslate="rewardprojectApp.tasks.description">Description</span></dt>
+        <dd>
+          <span>{{ tasks.description }}</span>
+        </dd>
+        <dt><span jhiTranslate="rewardprojectApp.tasks.point">Point</span></dt>
+        <dd>
+          <span>{{ tasks.point }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/tasks', tasks.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>
