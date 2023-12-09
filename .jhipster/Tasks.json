@@ -1,0 +1,28 @@
+{
+  "changelogDate": "20231114210940",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": []
+    },
+    {
+      "fieldName": "url",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "point",
+      "fieldType": "Integer",
+      "fieldValidateRules": []
+    }
+  ],
+  "name": "Tasks",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no"
+}

@@ -1,0 +1,27 @@
+{
+  "rewardprojectApp": {
+    "tasks": {
+      "home": {
+        "title": "Tasks",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Tasks erstellen",
+        "createOrEditLabel": "Tasks erstellen oder bearbeiten",
+        "notFound": "Keine Tasks gefunden"
+      },
+      "created": "Tasks erstellt mit ID {{ param }}",
+      "updated": "Tasks aktualisiert mit ID {{ param }}",
+      "deleted": "Tasks gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Tasks {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Tasks"
+      },
+      "id": "ID",
+      "name": "Name",
+      "url": "Url",
+      "description": "Description",
+      "point": "Point"
+    }
+  }
+}

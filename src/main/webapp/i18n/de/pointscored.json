@@ -1,0 +1,24 @@
+{
+  "rewardprojectApp": {
+    "pointscored": {
+      "home": {
+        "title": "Pointscoreds",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Pointscored erstellen",
+        "createOrEditLabel": "Pointscored erstellen oder bearbeiten",
+        "notFound": "Keine Pointscoreds gefunden"
+      },
+      "created": "Pointscored erstellt mit ID {{ param }}",
+      "updated": "Pointscored aktualisiert mit ID {{ param }}",
+      "deleted": "Pointscored gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Pointscored {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Pointscored"
+      },
+      "id": "ID",
+      "name": "Name"
+    }
+  }
+}

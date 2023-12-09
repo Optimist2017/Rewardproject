@@ -1,0 +1,27 @@
+{
+  "rewardprojectApp": {
+    "tasks": {
+      "home": {
+        "title": "Tasks",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Tasks",
+        "createOrEditLabel": "Create or edit a Tasks",
+        "notFound": "No Tasks found"
+      },
+      "created": "A new Tasks is created with identifier {{ param }}",
+      "updated": "A Tasks is updated with identifier {{ param }}",
+      "deleted": "A Tasks is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Tasks {{ id }}?"
+      },
+      "detail": {
+        "title": "Tasks"
+      },
+      "id": "ID",
+      "name": "Name",
+      "url": "Url",
+      "description": "Description",
+      "point": "Point"
+    }
+  }
+}

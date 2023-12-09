@@ -1,0 +1,27 @@
+{
+  "rewardprojectApp": {
+    "tasks": {
+      "home": {
+        "title": "Tasks",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Tasks",
+        "createOrEditLabel": "Créer ou éditer un Tasks",
+        "notFound": "Aucun Tasks trouvé"
+      },
+      "created": "Un nouveau Tasks a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Tasks avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Tasks avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Tasks {{ id }} ?"
+      },
+      "detail": {
+        "title": "Tasks"
+      },
+      "id": "ID",
+      "name": "Name",
+      "url": "Url",
+      "description": "Description",
+      "point": "Point"
+    }
+  }
+}

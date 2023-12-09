@@ -1,0 +1,24 @@
+{
+  "rewardprojectApp": {
+    "pointscored": {
+      "home": {
+        "title": "Pointscoreds",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Pointscored",
+        "createOrEditLabel": "Créer ou éditer un Pointscored",
+        "notFound": "Aucun Pointscored trouvé"
+      },
+      "created": "Un nouveau Pointscored a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Pointscored avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Pointscored avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Pointscored {{ id }} ?"
+      },
+      "detail": {
+        "title": "Pointscored"
+      },
+      "id": "ID",
+      "name": "Name"
+    }
+  }
+}
