@@ -1,9 +1,9 @@
-<nav data-cy="navbar" class="navbar navbar-light navbar-expand-md bg-light">
+<nav data-cy="navbar" class="navbar navbar-light navbar-expand-md bg-light" style="background-color: indianred">
   <div class="container-fluid">
     <a class="navbar-brand logo" routerLink="/" (click)="collapseNavbar()">
       <span class="logo-img"></span>
-      <span class="navbar-title">Prudent Rewards</span>
-      <span class="navbar-version">{{ version }}</span>
+      <span class="navbar-title">1MT</span>
+      <!-- <span class="navbar-version">{{ version }}</span> -->
     </a>
     <a
       class="navbar-toggler d-lg-none"
@@ -15,23 +15,29 @@
       aria-label="Toggle navigation"
       (click)="toggleNavbar()"
     >
-      <fa-icon icon="bars" style="color:orange"></fa-icon>
+      <fa-icon icon="bars" style="color: orange"></fa-icon>
     </a>
     <div class="navbar-collapse collapse" id="navbarResponsive" [ngbCollapse]="isNavbarCollapsed" [ngSwitch]="account !== null">
       <ul class="navbar-nav ms-auto">
-       
-
-        <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <li *ngSwitchCase="true" class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
           <a class="nav-link" routerLink="/" (click)="collapseNavbar()">
             <span>
               <fa-icon icon="home" style="color: orange"></fa-icon>
-              <span jhiTranslate="global.menu.home">Home</span>
+              <span>Dashboard </span>
+            </span>
+          </a>
+        </li>
+        <li *ngSwitchCase="false" class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+          <a class="nav-link" routerLink="/" (click)="collapseNavbar()">
+            <span>
+              <fa-icon icon="home" style="color: orange"></fa-icon>
+              <span>Home</span>
             </span>
           </a>
         </li>
 
-        <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-          <a class="nav-link" routerLink="/" (click)="collapseNavbar()">
+        <li *ngSwitchCase="false" class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+          <a class="nav-link" routerLink="/" [fragment]="'about'" (click)="collapseNavbar()">
             <span>
               <fa-icon icon="info-circle" style="color: orange"> </fa-icon>
               <span>About</span>

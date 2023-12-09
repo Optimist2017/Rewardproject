@@ -1,36 +1,32 @@
 <div class="container">
-  <div class="row">
-    <div class="col-lg-10 mx-auto">
-      <video id="video-player" class="w-100" controls>
-        <source src="{{" youtubeUrl }} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <!-- <div class="progress">
-                <div class="progress-bar" id="progress" style="width: 0;"></div>
-            </div> -->
-      <!-- <div class="w-100">
-        <iframe
-          width="1029"
-          height="579"
-          src= {{ youtubeUrl }}
-         
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
-      </div> -->
+  <!-- Your content goes here -->
+
+  <div class="row justify-content-center">
+    <div class="col">
+      <iframe
+        class="e2e-iframe-trusted-src"
+        width="100%"
+        height="515"
+        [src]="trustedUrl"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
     </div>
   </div>
 </div>
+
 <script>
   // JavaScript for controlling video playback and progress bar
-  const video = document.getElementById('video-player');
-  const progress = document.getElementById('progress');
 
-  video.addEventListener('timeupdate', () => {
-    const currentTime = video.currentTime;
-    const duration = video.duration;
-    const progressWidth = (currentTime / duration) * 100 + '%';
-    progress.style.width = progressWidth;
-  });
+  // const video = document.getElementById ('video-player');
+  // const progress = document.getElementById ('progress');
+
+  // video.addEventListener('timeupdate', () => {
+  //   const currentTime = video.currentTime;
+  //   const duration = video.duration;
+  //   const progressWidth = (currentTime / duration) * 100 + '%';
+  //   progress.style.width = progressWidth;
+  // });
 </script>

@@ -34,7 +34,7 @@ import { UserRouteAccessService } from 'app/core/auth/user-route-access.service'
           loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule),
         },
         {
-          path: 'dashboard/watch',
+          path: 'watch',
           loadChildren: () => import('./watch/watch.module').then(m => m.WatchModule),
         },
         {

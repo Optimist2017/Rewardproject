@@ -93,6 +93,7 @@
     "dayjs": "1.11.0",
     "ngx-infinite-scroll": "13.0.1",
     "ngx-webstorage": "9.0.0",
+    "request": "^2.88.2",
     "rxjs": "7.5.5",
     "tslib": "2.3.1",
     "zone.js": "0.11.4"
@@ -107,6 +108,7 @@
     "@angular/service-worker": "13.3.1",
     "@types/jest": "27.4.1",
     "@types/node": "16.11.26",
+    "@types/request": "^2.48.12",
     "@typescript-eslint/eslint-plugin": "5.18.0",
     "@typescript-eslint/parser": "5.18.0",
     "browser-sync": "2.27.9",

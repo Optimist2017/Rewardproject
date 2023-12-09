@@ -1,9 +1,8 @@
-
 <div class="container">
   <div class="row">
     <div class="col-md-4 col-sm-6">
       <!--put a random video to be watched (click)="watch()" -->
-      <a  class="menu-link">
+      <a class="menu-link">
         <!-- route to watch -->
         <div class="menu-item gradient1">
           <h3>Watch a Video</h3>
@@ -26,9 +25,7 @@
     </div>
   </div>
 
-
   <div>
-
     <div class="container mt-5">
       <div class="card">
         <div class="card-header">
@@ -49,18 +46,28 @@
             <!-- Content for New Tasks tab -->
             <div class="container mt-5">
               <div class="row">
+                <nav>
+                  <a routerLink="/watch">Go to Example</a>
+                </nav>
+
                 <div class="col-md-12" *ngFor="let item of items">
-                 <!-- pass specific video url "item.link" -->
-                  <a (click)="watch(item)" style="text-decoration: none; color: rgb(1, 1, 27);">
-                    <div class="card mb-3" >
-                    <div class="card-body itemslist" >
-                      <h5 class="card-title">{{ item.title }}</h5>
-                      <p class="card-text">{{ item.content }}</p>
-                      <span style="color: white;"> Watch Now to earn !</span>
-                      <a href="#" class="card-link float-end"><img src="https://www.logo.wine/a/logo/YouTube/YouTube-Logo.wine.svg" height="100px" width="100px" alt="YoutubeIcon"></a>
+                  <!-- pass specific video url "item.link" -->
+                  <a (click)="watch(item)" style="text-decoration: none; color: rgb(1, 1, 27)">
+                    <div class="card mb-3">
+                      <div class="card-body itemslist">
+                        <h5 class="card-title">{{ item.title }}</h5>
+                        <p class="card-text">{{ item.content }}</p>
+                        <span style="color: white"> Watch Now to earn !</span>
+                        <a href="#" class="card-link float-end"
+                          ><img
+                            src="https://www.logo.wine/a/logo/YouTube/YouTube-Logo.wine.svg"
+                            height="100px"
+                            width="100px"
+                            alt="YoutubeIcon"
+                        /></a>
+                      </div>
                     </div>
-                  </div>
-                </a>
+                  </a>
                 </div>
               </div>
             </div>
@@ -71,12 +78,18 @@
               <div class="row">
                 <div class="col-md-12" *ngFor="let item of itemd">
                   <div class="card mb-3">
-                    <div class="card-body "  >
+                    <div class="card-body">
                       <h5 class="card-title">{{ item.title }}</h5>
                       <p class="card-text">{{ item.content }}</p>
                       <!-- pass specific video url "item.link" -->
-                      <a (click)="watch(item)" class="card-link" >Watch Now</a>
-                      <a href="#" class="card-link float-end"><img src="https://www.logo.wine/a/logo/YouTube/YouTube-Logo.wine.svg" height="100px" width="100px" alt="YoutubeIcon"></a>
+                      <a (click)="watch(item)" class="card-link">Watch Now</a>
+                      <a href="#" class="card-link float-end"
+                        ><img
+                          src="https://www.logo.wine/a/logo/YouTube/YouTube-Logo.wine.svg"
+                          height="100px"
+                          width="100px"
+                          alt="YoutubeIcon"
+                      /></a>
                     </div>
                   </div>
                 </div>
@@ -90,10 +103,8 @@
                 <div class="col-md-12">
                   <div class="card">
                     <div class="card-body text-center">
-                      <div class=" mb-12" style="color:red"><h1> 40 </h1></div>
-                      <div class="row">
-                    
-                      </div>
+                      <div class="mb-12" style="color: red"><h1>40</h1></div>
+                      <div class="row"></div>
                       <p class="card-text mt-3">Accumulated Points.</p>
                     </div>
                   </div>
@@ -104,8 +115,5 @@
         </div>
       </div>
     </div>
-    
-    
-
-
+  </div>
 </div>
