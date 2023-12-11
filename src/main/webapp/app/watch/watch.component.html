@@ -1,8 +1,29 @@
-<div class="container">
-  <!-- Your content goes here -->
+<!-- <div class=" container">
+  
+    <div class="row justify-content-center">
+      <div class="col">
+        <iframe
+          class="e2e-iframe-trusted-src"
+          width="100%"
+          height="515"
+          [src]="trustedUrl"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div> -->
 
+<div class="container">
   <div class="row justify-content-center">
     <div class="col">
+      <div *ngIf="isLoaded" class="loader">
+        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+        Loading...
+      </div>
+
       <iframe
         class="e2e-iframe-trusted-src"
         width="100%"
@@ -12,21 +33,8 @@
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen
+        (load)="iframeload()"
       ></iframe>
     </div>
   </div>
 </div>
-
-<script>
-  // JavaScript for controlling video playback and progress bar
-
-  // const video = document.getElementById ('video-player');
-  // const progress = document.getElementById ('progress');
-
-  // video.addEventListener('timeupdate', () => {
-  //   const currentTime = video.currentTime;
-  //   const duration = video.duration;
-  //   const progressWidth = (currentTime / duration) * 100 + '%';
-  //   progress.style.width = progressWidth;
-  // });
-</script>

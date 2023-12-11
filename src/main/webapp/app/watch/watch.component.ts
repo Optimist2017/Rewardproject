@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, SecurityContext, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { AccountService } from 'app/core/auth/account.service';
@@ -6,7 +6,7 @@ import { Account } from 'app/core/auth/account.model';
 import { Observable, Subject } from 'rxjs';
 import { takeUntil, catchError, map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
-import { DomSanitizer } from '@angular/platform-browser';
+import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'jhi-watch',
@@ -18,6 +18,8 @@ export class WatchComponent implements OnInit {
   youtubeUrl: string | any;
   account: Account | null = null;
   videoId = 'VIDEO_ID';
+  isLoaded = true;
+  @ViewChild('iframe') iframe: ElementRef | undefined;
 
   // Replace with your API key
   private apiKey = '';
@@ -42,14 +44,21 @@ export class WatchComponent implements OnInit {
       this.videoId = params['videoid'];
       console.warn(this.videoId);
       this.youtubeUrl = `https://www.youtube.com/embed/${this.videoId}`;
-      this.trustedUrl = this.updateUrl(this.youtubeUrl);
-      console.warn(this.trustedUrl);
+      this.trustedUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.youtubeUrl);
+      // this.isLoaded=false;
     });
   }
 
   ngOnDestroy(): void {
     this.destroy$.next();
     this.destroy$.complete();
+  }
+
+  iframeload(): void {
+    const loader = document.querySelector('.loader') as HTMLElement;
+    const iframeElement = this.iframe?.nativeElement as HTMLFrameElement;
+    loader.style.display = 'none';
+    iframeElement.style.display = 'block';
   }
 
   // Send the API request
@@ -67,6 +76,7 @@ export class WatchComponent implements OnInit {
 
   updateUrl(youtubeUrl: string): any {
     const rightUrl = this.sanitizer.bypassSecurityTrustUrl(youtubeUrl);
+    this.sanitizer.sanitize(SecurityContext.RESOURCE_URL, youtubeUrl);
     return rightUrl;
   }
 }
