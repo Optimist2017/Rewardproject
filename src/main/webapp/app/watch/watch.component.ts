@@ -20,7 +20,7 @@ export class WatchComponent implements OnInit {
   videoId = 'VIDEO_ID';
 
   // Replace with your API key
-  private apiKey = 'AIzaSyCVBkC5Mnsnj4lzyr7zok9dhFy1wpwZodk';
+  private apiKey = '';
 
   private destroy$ = new Subject<void>();
 
